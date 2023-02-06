@@ -29,7 +29,9 @@ function curl($subdomain, $data, $headers, $method, $method_type) {
         503 => 'Service unavailable.'
     ];
 
+
     if ($code < 200 || $code > 204) die( "Error $code. " . (isset($errors[$code]) ? $errors[$code] : 'Undefined error') );
+
     return $out;
 
 }
