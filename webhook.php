@@ -1,6 +1,6 @@
 <?php
-
 require 'curl.php';
+require 'refresh.php';
 //tag "id":83291,"name":"Создана вручную"
 //  "id":81749,"name":"сайт
 

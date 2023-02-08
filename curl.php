@@ -1,7 +1,5 @@
 <?php
 
-$tokens = json_decode(file_get_contents('tokens.txt'), 1);
-$access_token = $tokens['access_token'];
 
 function curl($subdomain, $data, $headers, $method, $method_type) {
     $curl = curl_init();

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/authorization.php" method="post">
+    Секретный ключ:<br>
+    <input type="text" name="client_secret" required ><br>
+    ID интеграции:<br>
+    <input type="text" name="client_id" required ><br>
+    <!--    pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}-->
+    Код авторизации:<br>
+    <input type="text" name="code" required ><br><br>
+    <input type="submit" value="Отправить">
+</form>
+<br>
+
+</body>
+</html>

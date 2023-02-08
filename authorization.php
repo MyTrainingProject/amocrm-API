@@ -3,12 +3,10 @@
 require 'integration_key.php';
 require 'curl.php';
 
-    $subdomain = 'alexefilatov2012'; //Поддомен аккаунта
+    //Поддомен аккаунта
     $link = '/oauth2/access_token'; // URL  запроса
 
     $header = ['Content-Type:application/json'];
-
-    $token_file = 'tokens.txt';
 
 $data = [
     'client_id'     => $client_id,

@@ -2,40 +2,48 @@
 
 require_once 'integration_key.php';
 require_once 'curl.php';
+//
 
-
+echo "refresh.php" . PHP_EOL;
+//echo $token_file;
 $subdomain = 'alexefilatov2012'; //Поддомен аккаунта
-$link = '/oauth2/access_token'; // URL  запроса
+//$link = '/oauth2/access_token'; // URL  запроса
 
-print_r($data);
 
 
 $dataToken = file_get_contents($token_file);
 $dataToken = json_decode($dataToken, true);
+//print_r($dataToken);
+echo "\n";
+echo time() ;
+$refresh_token = $dataToken['refresh_token'];
+$access_token = $dataToken['access_token'];
+
+$headers = [
+    'Content-Type: application/json',
+    'Authorization: Bearer ' . $access_token,
+];
+
+
+print_r($refresh_token);
+//print_r($data);
 
 //обновление с поощью refresh токена access токена за 2 минуты до его  истечения
 if ($dataToken["endTokenTime"] - 120  < time()) {
-
-    $link = "https://$subdomain.amocrm.ru/oauth2/access_token";
-
-//    $data = [
-//        'client_id' => '',
-//        'client_secret' => '',
-//        'grant_type' => 'refresh_token',
-//        'refresh_token' => $dataToken["refresh_token"],
-//        'redirect_uri' => '',
-//    ];
+    echo "If-branch";
+    $link = '/oauth2/access_token';
 
     $data = [
         'client_secret' => $client_secret,
         'client_id' => $client_id,
         'grant_type' => 'refresh_token',
-        'refresh_token' => $dataToken['refresh_token'],
-        'redirect_uri' => 'http://alexefml.beget.tech/refresh.php',
+        'refresh_token' => $refresh_token,
+        'redirect_uri'  => 'http://alexefml.beget.tech/authorization.php',
     ];
-
-    $out = curl($subdomain, $data, $link, 'POST');
-
+    
+    print_r($data);
+    $out = curl($subdomain, $data, $headers, $link, 'POST');
+    echo "обновление токена";
     $response = json_decode($out, true);
     print_r($response);
 
@@ -56,7 +64,9 @@ if ($dataToken["endTokenTime"] - 120  < time()) {
     $access_token = $response['access_token'];
     $fl = fopen('log.txt', 'a');
     fwrite($fl, 'Токен был обновлен в ' . date('d.m.Y / H:i:s') . PHP_EOL);
+    fclose($fl);
 } else {
-    $access_token = $dataToken["access_token"];
+    $access_token = $dataToken['access_token'];
+    echo "Токен не был обновлен";
 
 }
