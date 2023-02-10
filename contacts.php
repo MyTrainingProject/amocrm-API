@@ -4,7 +4,7 @@ require 'integration_key.php';
 require 'curl.php';
 require 'refresh.php'; //обновление Access токена
 
-echo "contacts.php";
+echo "contacts.php<br>" ;
     function get_phones()
     {
 

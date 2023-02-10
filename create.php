@@ -26,14 +26,11 @@ $comment = $_POST['comment'];
 $phone = (int)$phone;
 $date = date('d.m.Y / H:i:s');
 //
-//$array = ['88005553535'];
-//$result = in_array('88005553535 ', $array);
-//echo "hello";
-//echo $result;
 
 
-if (in_array($phone, get_phones(), )) {
-    echo "TRUE";
+
+if (in_array($phone, get_phones() )) {
+    echo "<br>Телефон уже существует<br>";
 //    print_r(get_phones());
     $data =  [
         [
@@ -74,7 +71,7 @@ if (in_array($phone, get_phones(), )) {
         ];
 }
 else {
-    echo "FALSE";
+    echo "<br>Телефон будет создан вместе с контактом<br>";
 //    print_r(get_phones());
 
     $data =  [

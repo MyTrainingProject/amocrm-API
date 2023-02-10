@@ -4,7 +4,7 @@ require_once 'integration_key.php';
 require_once 'curl.php';
 //
 
-echo "refresh.php" . PHP_EOL;
+//echo "refresh.php" . PHP_EOL;
 
 //echo $token_file;
 //$link = '/oauth2/access_token'; // URL  запроса
@@ -13,8 +13,8 @@ $subdomain = 'alexefilatov2012'; //Поддомен аккаунта
 $dataToken = file_get_contents($token_file);
 $dataToken = json_decode($dataToken, true);
 //print_r($dataToken);
-echo "\n";
-echo time() ;
+//echo "\n";
+//echo time() ;
 
 
 //print_r($refresh_token);
@@ -43,7 +43,7 @@ if ($dataToken["endTokenTime"] - 120  < time()) {
 
 //    print_r($data);
     $out = curl($subdomain, $data, $headers, $link, 'POST');
-    echo "обновление токена";
+echo "обновление токена<br>";
     $response = json_decode($out, true);
     print_r($response);
 
@@ -67,8 +67,8 @@ if ($dataToken["endTokenTime"] - 120  < time()) {
     fclose($fl);
 } else {
     $access_token = $dataToken['access_token'];
-    echo "else-branch" . PHP_EOL;
-    echo "Токен не был обновлен";
+//    echo "else-branch" . PHP_EOL;
+    echo "Токен не нужно обновлять<br>";
 
 }
-echo 'end refresh.php file';
+//echo 'end refresh.php file';
