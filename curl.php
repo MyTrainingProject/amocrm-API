@@ -7,13 +7,15 @@ function curl($subdomain, $data, $headers, $method, $method_type) {
     curl_setopt($curl, CURLOPT_USERAGENT, 'amoCRM-API-client/1.0');
     curl_setopt($curl, CURLOPT_URL, "https://$subdomain.amocrm.ru".$method);
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method_type);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+    if ($method_type != 'GET') {
+        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+    }
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
     curl_setopt($curl, CURLOPT_HEADER, false);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
     $out = curl_exec($curl);
-    print_r($out);
+//    print_r($out);
     $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
     $code = (int) $code;
     $errors = [

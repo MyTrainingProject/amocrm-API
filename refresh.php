@@ -5,31 +5,31 @@ require_once 'curl.php';
 //
 
 echo "refresh.php" . PHP_EOL;
+
 //echo $token_file;
-$subdomain = 'alexefilatov2012'; //Поддомен аккаунта
 //$link = '/oauth2/access_token'; // URL  запроса
 
-
-
+$subdomain = 'alexefilatov2012'; //Поддомен аккаунта
 $dataToken = file_get_contents($token_file);
 $dataToken = json_decode($dataToken, true);
 //print_r($dataToken);
 echo "\n";
 echo time() ;
-$refresh_token = $dataToken['refresh_token'];
-$access_token = $dataToken['access_token'];
-
-$headers = [
-    'Content-Type: application/json',
-    'Authorization: Bearer ' . $access_token,
-];
 
 
-print_r($refresh_token);
-//print_r($data);
+//print_r($refresh_token);
 
 //обновление с поощью refresh токена access токена за 2 минуты до его  истечения
 if ($dataToken["endTokenTime"] - 120  < time()) {
+
+    $refresh_token = $dataToken['refresh_token'];
+    $access_token = $dataToken['access_token'];
+
+    $headers = [
+        'Content-Type: application/json',
+        'Authorization: Bearer ' . $access_token,
+    ];
+
     echo "If-branch";
     $link = '/oauth2/access_token';
 
@@ -40,8 +40,8 @@ if ($dataToken["endTokenTime"] - 120  < time()) {
         'refresh_token' => $refresh_token,
         'redirect_uri'  => 'http://alexefml.beget.tech/authorization.php',
     ];
-    
-    print_r($data);
+
+//    print_r($data);
     $out = curl($subdomain, $data, $headers, $link, 'POST');
     echo "обновление токена";
     $response = json_decode($out, true);
@@ -67,6 +67,8 @@ if ($dataToken["endTokenTime"] - 120  < time()) {
     fclose($fl);
 } else {
     $access_token = $dataToken['access_token'];
+    echo "else-branch" . PHP_EOL;
     echo "Токен не был обновлен";
 
 }
+echo 'end refresh.php file';
