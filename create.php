@@ -3,7 +3,7 @@
 require 'integration_key.php';
 //require 'curl.php';
 require_once 'form_variables.php';
-require 'contacts.php';
+require_once 'contacts.php';
 
 //print(get_phones());
 
@@ -22,13 +22,23 @@ $headers = [
 
 
 $date = date('d.m.Y / H:i:s');
-//
+
+$data = json_decode(file_get_contents('form_vars.txt'), 1);
+$phone = (int)$data['phone'];
+$comment = $data['comment'];
+$name = $data['name'];
 
 
 
 if (in_array($phone, get_phones() )) {
+//    set_flag();
     echo "<br>Телефон уже существует<br>";
 //    print_r(get_phones());
+
+    $fh = fopen('flag.txt', 'w');
+    $fh = fwrite();
+    fclose();
+
     $data =  [
         [
             'name' => "Заявка с сайта $date",

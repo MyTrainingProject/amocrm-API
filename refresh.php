@@ -43,7 +43,7 @@ if ($dataToken["endTokenTime"] - 120  < time()) {
 
 //    print_r($data);
     $out = curl($subdomain, $data, $headers, $link, 'POST');
-echo "обновление токена<br>";
+    echo "обновление токена<br>";
     $response = json_decode($out, true);
     print_r($response);
 
