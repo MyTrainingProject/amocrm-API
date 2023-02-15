@@ -3,7 +3,7 @@
 require_once 'curl.php';
 //GET - https://alexefilatov2012.amocrm.ru//api/v4/leads/6446979/notes
 //POST /api/v4/{entity_type}/{entity_id}/notes
-function post_notes($id, $text) {
+function add_notes($id, $text) {
 
     $subdomain = 'alexefilatov2012gmailcom';
     $method = '/api/v4/leads/notes';
@@ -32,5 +32,5 @@ function post_notes($id, $text) {
     print_r($out);
 }
 
-post_notes(1069085, "текст");
+//post_notes(1069085, "текст");
 

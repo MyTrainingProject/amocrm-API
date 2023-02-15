@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0afd1ed0-560a-428e-af4e-d22ba6179fb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/notes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/form_variables.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/backup/index2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backup/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/integration_key.php" beforeDir="false" afterPath="$PROJECT_DIR$/integration_key.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/refresh.php" beforeDir="false" afterPath="$PROJECT_DIR$/refresh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/notes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/tasks.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webhook.php" beforeDir="false" afterPath="$PROJECT_DIR$/webhook.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,12 +67,12 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/amo/index.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\amocrm" />
       <recent name="C:\OSPanel\domains\amocrm\backup" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\amocrm\backup" />
-      <recent name="C:\OSPanel\domains\amocrm" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -131,7 +129,8 @@
       <workItem from="1676380640270" duration="20426000" />
       <workItem from="1676422158265" duration="5612000" />
       <workItem from="1676476883905" duration="3994000" />
-      <workItem from="1676481780618" duration="206000" />
+      <workItem from="1676481780618" duration="4216000" />
+      <workItem from="1676486036269" duration="407000" />
     </task>
     <servers />
   </component>

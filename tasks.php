@@ -4,7 +4,8 @@ require_once 'curl.php';
 //GET - /api/v4/tasks
 //POST POST /api/v4/tasks
 
-
+function add_task($id)
+{
     $subdomain = 'alexefilatov2012gmailcom';
     $method = '/api/v4/tasks';
 
@@ -17,11 +18,12 @@ require_once 'curl.php';
     ];
     $time = time() + 3600;
 
+
     $data = [
         [
             "task_type_id" => 2803346,
             "text" => "Перезвонить",
-            "entity_type" => 1178881,
+            "entity_id" => $id,
             "entity_type" => "leads",
             "complete_till" => $time
         ]
@@ -32,6 +34,8 @@ require_once 'curl.php';
 
     print_r($out);
 
+
+}
 
 
 

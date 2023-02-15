@@ -2,7 +2,7 @@
 
 require 'integration_key.php';
 //require 'curl.php';
-
+require_once 'form_variables.php';
 require 'contacts.php';
 
 //print(get_phones());
@@ -20,10 +20,7 @@ $headers = [
     'Authorization: Bearer ' . $access_token,
 ];
 
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$comment = $_POST['comment'];
-$phone = (int)$phone;
+
 $date = date('d.m.Y / H:i:s');
 //
 

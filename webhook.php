@@ -1,7 +1,8 @@
 <?php
 require_once'curl.php';
-require 'refresh.php';
-require 'notes.php';
+require_once 'refresh.php';
+require_once 'notes.php';
+require_once 'tasks.php';
 //tag "id":83291,"name":"Создана вручную"
 //  "id":81749,"name":"сайт
 
@@ -10,10 +11,12 @@ require 'notes.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' and $_POST['leads']['add'][0]['tags'][0]['id'] != 18775) {
-
+//   #Тег - "Создана вручную"
 //    post_notes($id, "Какой-то текст");
+    $id = (int)$_POST['leads']['add'][0]['id'];
 
-
+    add_task($id);
+    add_notes($id, "Создана вручную");
 
     $post_array = $_POST['leads']['add'][0];
        $data = [
