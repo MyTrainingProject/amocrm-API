@@ -1,7 +1,7 @@
 <?php
 
 require 'integration_key.php';
-require 'curl.php';
+require_once 'curl.php';
 require 'refresh.php'; //обновление Access токена
 
 echo "contacts.php<br>" ;
@@ -12,7 +12,7 @@ echo "contacts.php<br>" ;
         //print_r($tokens);
         $access_token = $tokens['access_token'];
         //echo $access_token;
-        $subdomain = 'alexefilatov2012';
+        $subdomain = 'alexefilatov2012gmailcom';
         //https://alexefilatov2012.amocrm.ru/api/v4/contacts/custom_fields
         //https://alexefilatov2012.amocrm.ru/api/v4/contacts
 

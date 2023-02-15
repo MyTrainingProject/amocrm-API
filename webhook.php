@@ -1,6 +1,7 @@
 <?php
-require 'curl.php';
+require_once'curl.php';
 require 'refresh.php';
+require 'notes.php';
 //tag "id":83291,"name":"Создана вручную"
 //  "id":81749,"name":"сайт
 
@@ -8,16 +9,20 @@ require 'refresh.php';
 //запись овтета запроса в файл webhook.txt
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' and $_POST['leads']['add'][0]['tags'][0]['id'] != 81749) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' and $_POST['leads']['add'][0]['tags'][0]['id'] != 18775) {
 
-       $post_array = $_POST['leads']['add'][0];
+//    post_notes($id, "Какой-то текст");
+
+
+
+    $post_array = $_POST['leads']['add'][0];
        $data = [
            [
                'id' => (int)$post_array['id'],
 
                'custom_fields_values' => [
                    [
-                       "field_id" => 1863831,
+                       "field_id" => 543591,
                        "values" => [
                            [
                                "value" => 'Создана вручную'
@@ -30,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' and $_POST['leads']['add'][0]['tags'][
                "_embedded" => [
                    'tags' => [
                        'values' => [
-                           "id" => 83291,
+                           "id" => 18787,
                            "name" => 'Создана вручную',
                        ],
                    ]
@@ -40,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' and $_POST['leads']['add'][0]['tags'][
 
 
        $method = "/api/v4/leads";
-       $subdomain = 'alexefilatov2012';
+       $subdomain = 'alexefilatov2012gmailcom';
        $tokens = json_decode(file_get_contents('tokens.txt'), 1);
        $access_token = $tokens['access_token'];
        $headers = [
@@ -57,6 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' and $_POST['leads']['add'][0]['tags'][
     fclose($fh);
 
 }
+//else if ($_POST['leads']['add'][0]['tags'][0]['id'] == 18775) {
+//    $id = (int)['leads']['add'][0]['id'];
+//    post_notes($id, "Какой-то текст");
+//
+//
+//}
 
 echo "<br>";
 

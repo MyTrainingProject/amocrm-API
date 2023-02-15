@@ -7,7 +7,7 @@ require 'contacts.php';
 
 //print(get_phones());
 
-$subdomain = 'alexefilatov2012'; //Поддомен аккаунта
+$subdomain = 'alexefilatov2012gmailcom'; //Поддомен аккаунта
 $tokens = json_decode(file_get_contents($token_file), 1);
 
 $access_token = $tokens['access_token'];
@@ -35,13 +35,13 @@ if (in_array($phone, get_phones() )) {
     $data =  [
         [
             'name' => "Заявка с сайта $date",
-            'status_id '=> 54683314, // id колонки
-            'pipeline_id' => 6384766, //  id воронки
+            'status_id '=> 55168394, // id колонки
+            'pipeline_id' => 6461886, //  id воронки
             'price' => 10000,
-            'responsible_user_id '=> 9174234,
+            'responsible_user_id '=> 9254118,
             'custom_fields_values' => [
                 [
-                    "field_id" => 1861851,
+                    "field_id" => 543493,
                     "values" => [
                         [
                             "value" => $comment
@@ -49,7 +49,7 @@ if (in_array($phone, get_phones() )) {
                     ]
                 ],
                 [
-                    "field_id" => 1863831,
+                    "field_id" => 543591,
                     "values" => [
                         [
                             "value" => 'Сайт'
@@ -77,13 +77,13 @@ else {
     $data =  [
         [
             'name' => "Заявка с сайта $date",
-            'status_id '=> 54683314, // id колонки
-            'pipeline_id' => 6384766, //  id воронки
+            'status_id '=> 55168394, // id колонки
+            'pipeline_id' => 6461886, //  id воронки
             'price' => 10000,
-            'responsible_user_id '=> 9174234,
+            'responsible_user_id '=> 9254118,
             'custom_fields_values' => [
                 [
-                    "field_id" => 1861851,
+                    "field_id" => 543493,
                     "values" => [
                         [
                             "value" => $comment
@@ -91,7 +91,7 @@ else {
                     ]
                 ],
                 [
-                    "field_id" => 1863831,
+                    "field_id" => 543591,
                     "values" => [
                         [
                             "value" => 'Сайт'
@@ -137,3 +137,4 @@ else {
 
 
 $out = curl($subdomain, $data, $headers, $method, 'POST');
+print_r($out);

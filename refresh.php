@@ -9,7 +9,7 @@ require_once 'curl.php';
 //echo $token_file;
 //$link = '/oauth2/access_token'; // URL  запроса
 
-$subdomain = 'alexefilatov2012'; //Поддомен аккаунта
+$subdomain = 'alexefilatov2012gmailcom'; //Поддомен аккаунта
 $dataToken = file_get_contents($token_file);
 $dataToken = json_decode($dataToken, true);
 //print_r($dataToken);
