@@ -13,21 +13,23 @@ require_once 'tasks.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        //    post_notes($id, "Какой-то текст");
+        //получение данных введенных в форму
         $data = json_decode(file_get_contents('form_vars.txt'), 1);
         $phone = (int)$data['phone'];
         $comment = $data['comment'];
         $name = $data['name'];
         $id = (int)$_POST['leads']['add'][0]['id'];
 
-        add_task($id);
-        add_notes($id, "Создана вручную");
+        add_task($id); //добавление задачи
 
         if ($_POST['leads']['add'][0]['tags'][0]['id'] == 18775) {
+            //   #Тег - "сайт"
+
             $time = date('d.m.Y / H:i:s');
-
-            add_notes($id, "Заявка с сайта $time\n Имя: $name\n Телефон: $phone\n Комментарий: $comment");
-
+            if (file_get_contents('flag.txt') == 'true') {
+                //добавление заметки
+                add_notes($id, "Заявка с сайта $time\n Имя: $name\n Телефон: $phone\n Комментарий: $comment");
+            }
         }
 
         if ($_POST['leads']['add'][0]['tags'][0]['id'] != 18775) {
@@ -82,12 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
 }
-//else if ($_POST['leads']['add'][0]['tags'][0]['id'] == 18775) {
-//    $id = (int)['leads']['add'][0]['id'];
-//    post_notes($id, "Какой-то текст");
-//
-//
-//}
+
 
 echo "<br>";
 

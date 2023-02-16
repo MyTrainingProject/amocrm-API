@@ -2,22 +2,15 @@
 
 require_once 'integration_key.php';
 require_once 'curl.php';
-//
 
-//echo "refresh.php" . PHP_EOL;
 
-//echo $token_file;
-//$link = '/oauth2/access_token'; // URL  запроса
+
 
 $subdomain = 'alexefilatov2012gmailcom'; //Поддомен аккаунта
 $dataToken = file_get_contents($token_file);
 $dataToken = json_decode($dataToken, true);
-//print_r($dataToken);
-//echo "\n";
-//echo time() ;
 
 
-//print_r($refresh_token);
 
 //обновление с поощью refresh токена access токена за 2 минуты до его  истечения
 if ($dataToken["endTokenTime"] - 120  < time()) {

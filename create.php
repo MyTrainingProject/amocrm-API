@@ -1,7 +1,6 @@
 <?php
 
 require 'integration_key.php';
-//require 'curl.php';
 require_once 'form_variables.php';
 require_once 'contacts.php';
 
@@ -36,8 +35,9 @@ if (in_array($phone, get_phones() )) {
 //    print_r(get_phones());
 
     $fh = fopen('flag.txt', 'w');
-    $fh = fwrite();
-    fclose();
+    $fh = fwrite($fh, 'true');
+    fclose($fh);
+
 
     $data =  [
         [
@@ -80,6 +80,10 @@ if (in_array($phone, get_phones() )) {
 else {
     echo "<br>Телефон будет создан вместе с контактом<br>";
 //    print_r(get_phones());
+    $fh = fopen('flag.txt', 'w');
+    $fh = fwrite($fh, 'false');
+    fclose($fh);
+
 
     $data =  [
         [
