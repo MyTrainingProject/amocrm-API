@@ -20,14 +20,12 @@ $out = curl($subdomain, null, $headers, $method, 'GET');
 $response = json_decode($out, true);
 
 $leads_array = $response['_embedded']['leads'];
-$count = 0;
+
 foreach($leads_array as $value) {
-//    closest_task_at
-//    print_r($value['closest_task_at']);
+
     if ($value['closest_task_at'] == null) {
         $id = (int)$value['id'];
         add_task($id);
     }
 }
 
-print_r($count);
