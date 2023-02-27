@@ -10,7 +10,6 @@ $subdomain = 'alexefilatov2012gmailcom'; //Поддомен аккаунта
 $tokens = json_decode(file_get_contents($token_file), 1);
 
 $access_token = $tokens['access_token'];
-//print_r($access_token);
 
 $method = "/api/v4/leads/complex";
 
@@ -30,9 +29,8 @@ $name = $data['name'];
 
 
 if (in_array($phone, get_phones() )) {
-//    set_flag();
+
     echo "<br>Телефон уже существует<br>";
-//    print_r(get_phones());
 
     $fh = fopen('flag.txt', 'w');
     $fh = fwrite($fh, 'true');
@@ -141,10 +139,6 @@ else {
     ];
 
 }
-
-//
-//$out = curl($subdomain, $data, $headers, $method, 'POST');
-//print_r($out);
 
 
 $out = curl($subdomain, $data, $headers, $method, 'POST');

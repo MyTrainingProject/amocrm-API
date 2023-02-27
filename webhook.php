@@ -20,11 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $data['name'];
         $id = (int)$_POST['leads']['add'][0]['id'];
 
-        add_task($id); //добавление задачи
+
 
         if ($_POST['leads']['add'][0]['tags'][0]['id'] == 18775) {
             //   #Тег - "сайт"
 
+            add_task($id); //добавление задачи
             $time = date('d.m.Y / H:i:s');
             if (file_get_contents('flag.txt') == 'true') {
                 //добавление заметки
