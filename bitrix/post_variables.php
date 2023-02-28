@@ -30,7 +30,7 @@ $fh = fopen('variables.txt', 'w');
 fwrite($fh, $data);
 fclose($fh);
 
-$key ='https://b24-rxbifg.bitrix24.ru/rest/1/j1xejs10o4c0flbz/';
+$key ='https://b24-rxbifg.bitrix24.ru/rest/1/rurm2ggldnwcsxsl/';
 
 $url = "$key./crm.lead.add.json";
 

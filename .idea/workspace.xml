@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0afd1ed0-560a-428e-af4e-d22ba6179fb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bitrix/contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bitrix/curl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bitrix/forms_variables.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bitrix/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bitrix/post_variables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitrix/activity.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webhook.php" beforeDir="false" afterPath="$PROJECT_DIR$/webhook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitrix/post_variables.php" beforeDir="false" afterPath="$PROJECT_DIR$/bitrix/post_variables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitrix/webhook.php" beforeDir="false" afterPath="$PROJECT_DIR$/bitrix/webhook.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +132,8 @@
       <workItem from="1676728671045" duration="2534000" />
       <workItem from="1676765980850" duration="613000" />
       <workItem from="1676848604965" duration="10754000" />
-      <workItem from="1677414028685" duration="19073000" />
+      <workItem from="1677414028685" duration="27954000" />
+      <workItem from="1677540146708" duration="4711000" />
     </task>
     <servers />
   </component>
