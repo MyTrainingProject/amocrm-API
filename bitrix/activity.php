@@ -4,12 +4,12 @@ require_once '../bitrix/curl.php';
 $data = json_decode(file_get_contents('webhook.txt'), 1);
 print_r($data);
 
-$id = $data['data']['FIELDS']['ID'];
+$id = $data['data']['FIELDS']['ID']; // получение id из свежесозданной сделки
 print_r($id);
 
 $url = 'https://b24-rxbifg.bitrix24.ru/rest/1/5anlxpknwfvdaf8h/crm.activity.add.json';
 //$time = time() + 3600;
-$date = date('d.m.Y / H:i:s');
+$date = date('d.m.Y / H + 1:i:s');
 
 $data = http_build_query([
     'fields' => [

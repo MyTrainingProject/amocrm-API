@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0afd1ed0-560a-428e-af4e-d22ba6179fb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bitrix/activity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitrix/get_deal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitrix/update_deal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitrix/post_variables.php" beforeDir="false" afterPath="$PROJECT_DIR$/bitrix/post_variables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitrix/activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/bitrix/activity.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bitrix/webhook.php" beforeDir="false" afterPath="$PROJECT_DIR$/bitrix/webhook.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,11 +64,11 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/amo/index.php" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\OSPanel\domains\amocrm" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\amocrm\backup" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\amocrm" />
       <recent name="C:\OSPanel\domains\amocrm\backup" />
     </key>
   </component>
@@ -133,7 +134,8 @@
       <workItem from="1676765980850" duration="613000" />
       <workItem from="1676848604965" duration="10754000" />
       <workItem from="1677414028685" duration="27954000" />
-      <workItem from="1677540146708" duration="4711000" />
+      <workItem from="1677540146708" duration="5351000" />
+      <workItem from="1677598622919" duration="5045000" />
     </task>
     <servers />
   </component>
