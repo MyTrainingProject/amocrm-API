@@ -2,6 +2,7 @@
 
 require_once '../bitrix/curl.php';
 require_once '../bitrix/update_deal.php';
+require_once '../bitrix/activity.php.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //запись  ответа от вебхука в отдельный фафл 'webhook.txt'
@@ -36,8 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         print_r("True");
         update_deal($id);
 
+
+
     }
 
-    else print_r($out_array['result']['SOURCE_ID']);
+    else {
+        create_activity($id);
+    } print_r($out_array['result']['SOURCE_ID']);
 
 }

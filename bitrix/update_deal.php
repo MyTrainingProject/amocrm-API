@@ -8,7 +8,7 @@ function update_deal($id)
     $data = http_build_query([
         'id' => $id,
         'fields' => [
-                'SOURCE_ID' => 'UC_3T2RFW',
+                'SOURCE_ID' => 'UC_3T2RFW', //установка в поле источник значения "Создана вручную"
         ],
         'params' => ['REGISTER_SONET_EVENT' => "Y"]
 ]);
